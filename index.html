@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>TriviaGame</title>
+</head>
+<body>
+
+
+
+
+
+    <div class="main">
+
+
+
+        <div class="jumbotron" style="background-color:brown; color: white">
+            <h1 class="text-center"><strong>Saved By The Bell Trivia game!</strong> </h1>
+            <p class="lead text-center">Your favorite 90's tv show is now your favorite trivia game!!!</p>
+            <hr class="my-4">
+            <p>Instructions: Answer as many questions as you can in 30 seconds.</p>
+            <a class="btn btn-primary" id="start-btn" href="#" role="button">Start Game</a>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-3" style="background-color:black; color: white">
+                <h3 class="text-center" id="show-timer">30</h3>
+            </div>
+        </div>
+
+
+        <h5 class="text-center">What year did the first episode air?.</h5><br>
+        <form id="d1" class="text-center">
+        <input type="radio" name="choice" value="1990"> 1990
+        <input type="radio" name="choice" value="1998"> 1998
+        <input type="radio" name="choice" value="1989"> 1989
+        <input type="radio" name="choice" value="1995"> 1995
+        <br>
+        <button onclick="yearAnswer(d1.choice.value, '1989')">Submit Answer</button>
+        </form>
+
+
+        <h5 class="text-center">What was Zack's last name?</h5><br>
+        <form id="d1" class="text-center">
+        <input type="radio" name="choice" value="Morrison"> Morrison
+        <input type="radio" name="choice" value="Morris"> Morris
+        <input type="radio" name="choice" value="Belding"> Belding
+        <input type="radio" name="choice" value="Slater"> Slater
+        <br>
+        <button onclick="submitAnswer(d1.choice.value, 'Morris')">Submit Answer</button> 
+        </form>
+
+        <h5 class="text-center">What was the name of the high school?</h5><br>
+        <form id="d1" class="text-center">
+        <input type="radio" name="choice" value="Valley"> Valley
+        <input type="radio" name="choice" value="Bayridge"> Bayridge
+        <input type="radio" name="choice" value="Baycity"> Baycity
+        <input type="radio" name="choice" value="Bayside"> Bayside
+        <br>
+        <button onclick="schoolAnswer(d1.choice.value, 'Bayside')">Submit Answer</button>
+        </form>
+
+        <h5 class="text-center">What was the principal's name?</h5><br>
+        <form id="d1" class="text-center">
+        <input type="radio" name="choice" value="Mr. Belding"> Mr. Belding
+        <input type="radio" name="choice" value="Mr. Carosi"> Mr. Carosi
+        <input type="radio" name="choice" value="Max"> Max
+        <input type="radio" name="choice" value="None of These"> None of These
+        <br>
+        <button onclick="principalAnswer(d1.choice.value, 'Mr. Belding')">Submit Answer</button> 
+        </form>
+
+        <h5 class="text-center">Who was Screech's love interest?</h5><br>
+        <form id="d1" class="text-center">
+        <input type="radio" name="choice" value="Lisa"> Lisa
+        <input type="radio" name="choice" value="Jessie"> Jessie
+        <input type="radio" name="choice" value="Stacey"> Stacey
+        <input type="radio" name="choice" value="Tori"> Tori
+        <br>
+        <button onclick="loveAnswer(d1.choice.value, 'Lisa')">Submit Answer</button> 
+        </form>
+
+
+        <div class="row">
+            <div class="col-lg-6">
+
+                <div class="card">
+                    <div class="card-header text-center" style="background-color:brown; color: white;">
+                        Correct Answers
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title text-center" id="correctAnswers">
+                            0
+                        </h3>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="col-lg-6">
+
+                <div class="card">
+                    <div class="card-header text-center" style="background-color:brown; color: white;">
+                        Wrong answers
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title text-center" id="wrongAnswers">
+                            0
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/javascript/javascript.js"></script>
+
+    <!-- <script src="simpleTimer.js"></script> -->
+
+</body>
+</html>
